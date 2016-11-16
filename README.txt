@@ -1,10 +1,8 @@
 
 ================================================================================
         FOREX Marketplace Simulation, Analysis and Predictions
-
-		                  --- README / Introduction ----
-
-			                 Amaury de Melo Souza May - 2016
+                 --- README / Introduction ----
+                Amaury de Melo Souza May - 2016
 ================================================================================
 
 MOTIVATION: This project simulates a peer-to-peer currency marketplace of two currencies. 
@@ -21,6 +19,36 @@ The last part is to demonstrate how Machine Learning techniques can be used to p
 an advertised sale placed on the market will be bought or not, and if so how long it takes
 for the sale to occur. Finally, a summary of the project is provided.
 
+================================================================================
+         BRIEF EXPLANATION OF THE WORK FLOW AND ASSUMPTIONS MADE 
+================================================================================
+1) INITIALIZING THE DATA: 
+a) Currency exchange rate varies over time: in order to simulate the exchange rate 
+varying over time, I assume that the
+exchange rate follows a brownian motion type of curve %(see ER_generator.m).
+The exchange rate could automatically be obtained from the internet to get
+the real time IBR from %http://www.fxstreet.com/rates-charts/forex-rates/.
+However, I assume that there is no internet access to run the code.
+
+%b) For every simulated time step, a random number of traders (following a 
+%normal distribution) come to the system on both sides of the market. The 
+%average of traders can be chosen by USER. The important fact is that, the 
+%average will change automatically following the inter-bank exchange rate.
+%In other words, if the IBR decreases for the trader in the GPB market,
+%there will be a smaller average number of traders coming into the system,
+%whereas an increase in the average number of traders in the Euro market 
+%would be observed. 
+
+%c) Traders with quicktrader status are also included in the list of
+%traders and they are identified with a logical index.
+
+%c) For every trader, there is a random generator (following a uniform dist.)
+%for his amount of money on both markets. The mininum allowed is 100 (either
+%GBP or Euros) and the maximum allowed is 500000 in multiples of 100.
+
+%3)The initial Euro to Pounds exchange rate is the latest given by the
+%european central bank ER(Euro/GBP= 0.77483). Likewise, the exchange rate 
+%between Pounds and Euro is ER(GBP/Euro)=1/0.77483=1.2906. 
 An outline of the project is shown below, the recommended reading order is
 
 	Part 1: marketplace.ipynb
