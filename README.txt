@@ -59,14 +59,17 @@ An outline of the project is shown below, the recommended reading order is
 	Part 1: MarketPlace_Simulator.ipynb
 		      /Soure_Code.tar (This folder contains all the files need to perform the calculations)
 	Part 2: Exploratory_data_analysis.ipynb
-	              /Extra_graphics.tar (This folder contains extra graphics in order to explain the matching system implemented in the code.
+	              /Extra_graphics.tar (This folder contains extra graphics in order to explain 
+		      the matching system implemented in the code.
   
 	Part 3: Prediction.ipynb
 
 ================================================================================
                       SET OF FILES AND THEIR DESCRIPTION:
 ================================================================================
-All the Mablab and Python files to run the marketplace and ML, respectively, if found in the "Source_Code" Directory. Here is a short description of each file to give an overview of all the generators needed for the marketplace.
+All the Mablab and Python files to run the marketplace and ML, respectively, if found in the "Source_Code"
+Directory. Here is a short description of each file to give an overview of all the generators 
+needed for the marketplace.
 
 ER_generator.m: This function generates the inter-bank rate using a browining motion model.
 
